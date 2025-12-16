@@ -266,16 +266,3 @@ Comprehensions provide a concise way to create collections using a single line.
 data = {x: x*x for x in range(3)}
 </code></pre>
 
-<hr>
-
-<h2>✅ Summary</h2>
-<ul>
-  <li>Strong understanding of Python fundamentals</li>
-  <li>Clear knowledge of data structures and control flow</li>
-  <li>Ability to write clean and logical programs</li>
-  <li>Prepared for advanced Python, SQL, and real-world projects</li>
-</ul>
-
-<p align="center">
-  🚀 <b>Next Step:</b> Advanced Python • SQL • Data Analysis • Projects
-</p>
