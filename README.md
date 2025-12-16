@@ -123,4 +123,159 @@ a += 2
 
 <h3>6. Strings</h3>
 <p>
-Strings are sequences of characters enclosed in quo
+Strings are sequences of characters enclosed in quotes.
+Strings are <b>immutable</b>, meaning once created, they cannot be changed.
+</p>
+
+<p>
+Strings support indexing, slicing, and skipping.
+</p>
+
+<pre><code>s = "Python"
+s[0]       # indexing
+s[1:4]     # slicing
+s[::2]     # skipping
+</code></pre>
+
+<hr>
+
+<h3>7. Lists</h3>
+<p>
+Lists are ordered collections that can store multiple values.
+Lists are <b>mutable</b>, so elements can be added, removed, or modified.
+</p>
+
+<pre><code>lst = [1, 2, 3]
+lst.append(4)
+lst[0] = 10
+</code></pre>
+
+<hr>
+
+<h3>8. Tuples</h3>
+<p>
+Tuples are similar to lists but are <b>immutable</b>.
+They are used when data should not be modified.
+</p>
+
+<pre><code>t = (1, 2, 3)
+t[1]
+</code></pre>
+
+<hr>
+
+<h3>9. Sets</h3>
+<p>
+Sets are unordered collections that store only unique values.
+They do not support indexing or slicing.
+Sets use hashing internally.
+</p>
+
+<pre><code>s = {1, 2, 3, 3}
+# Result: {1, 2, 3}
+</code></pre>
+
+<hr>
+
+<h3>10. Dictionary</h3>
+<p>
+Dictionaries store data as key–value pairs.
+They are mutable and use hashing for fast access.
+</p>
+
+<pre><code>d = {"name": "Ram", "age": 25}
+d["name"]
+</code></pre>
+
+<hr>
+
+<h2>📗 Intermediate Python</h2>
+
+<h3>1. Control Statements</h3>
+
+<h4>For Loop</h4>
+<p>
+For loops iterate over sequences like strings, lists, tuples, sets, and dictionaries.
+</p>
+
+<pre><code>for i in range(5):
+    print(i)
+</code></pre>
+
+<h4>While Loop</h4>
+<p>
+While loops continue execution as long as a condition remains true.
+</p>
+
+<pre><code>n = 1
+while n <= 5:
+    print(n)
+    n += 1
+</code></pre>
+
+<h4>Break Statement</h4>
+<p>
+The break statement stops loop execution immediately.
+</p>
+
+<pre><code>for i in range(10):
+    if i == 5:
+        break
+    print(i)
+</code></pre>
+
+<hr>
+
+<h3>2. Conditional Statements</h3>
+<p>
+Conditional statements allow programs to make decisions.
+</p>
+
+<pre><code>if a > b:
+    print("A is greater")
+elif a == b:
+    print("Equal")
+else:
+    print("B is greater")
+</code></pre>
+
+<hr>
+
+<h3>3. Functions</h3>
+<p>
+Functions are reusable blocks of code that perform a specific task.
+They help in modularizing programs and avoiding repetition.
+</p>
+
+<pre><code>def add(a, b):
+    return a + b
+</code></pre>
+
+<pre><code>square = lambda x: x * x
+list(map(square, [1, 2, 3]))
+</code></pre>
+
+<hr>
+
+<h3>4. Comprehensions</h3>
+<p>
+Comprehensions provide a concise way to create collections using a single line.
+</p>
+
+<pre><code>squares = [x*x for x in range(5)]
+data = {x: x*x for x in range(3)}
+</code></pre>
+
+<hr>
+
+<h2>✅ Summary</h2>
+<ul>
+  <li>Strong understanding of Python fundamentals</li>
+  <li>Clear knowledge of data structures and control flow</li>
+  <li>Ability to write clean and logical programs</li>
+  <li>Prepared for advanced Python, SQL, and real-world projects</li>
+</ul>
+
+<p align="center">
+  🚀 <b>Next Step:</b> Advanced Python • SQL • Data Analysis • Projects
+</p>
