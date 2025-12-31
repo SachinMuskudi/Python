@@ -1,7 +1,7 @@
 <h1 align="center">🐍 Python Learning Roadmap</h1>
 
 <p align="center">
-  <i>A complete beginner-to-intermediate Python guide with clear explanations, syntax, and examples.</i>
+  <i>A complete, beginner-friendly Python guide with definitions, syntax, examples, and practice concepts.</i>
 </p>
 
 <hr>
@@ -10,18 +10,18 @@
 
 <h3>1. Data Types</h3>
 <p>
-A data type defines the <b>type of value</b> stored in a variable and the <b>operations</b> that can be performed on it.
-Python is <b>dynamically typed</b>, meaning type is decided at runtime.
+Data types define the <b>kind of value</b> a variable holds and the operations allowed on it.
+Python is <b>dynamically typed</b>, so type is decided at runtime.
 </p>
 
 <ul>
-  <li><b>int</b> – whole numbers</li>
-  <li><b>float</b> – decimal values</li>
-  <li><b>str</b> – text</li>
-  <li><b>list</b> – ordered & mutable</li>
-  <li><b>tuple</b> – ordered & immutable</li>
-  <li><b>set</b> – unordered & unique</li>
-  <li><b>dict</b> – key-value pairs</li>
+  <li><b>int</b> – Whole numbers</li>
+  <li><b>float</b> – Decimal numbers</li>
+  <li><b>str</b> – Text data</li>
+  <li><b>list</b> – Ordered, mutable collection</li>
+  <li><b>tuple</b> – Ordered, immutable collection</li>
+  <li><b>set</b> – Unordered, unique elements</li>
+  <li><b>dict</b> – Key–value pairs</li>
 </ul>
 
 <pre><code>x = 10
@@ -33,8 +33,7 @@ name = "Python"
 
 <h3>2. Variables</h3>
 <p>
-Variables are names that <b>refer to memory locations</b>.
-No need to declare data type explicitly.
+Variables act as <b>labels for memory locations</b>. Python variables do not need type declaration.
 </p>
 
 <pre><code>a = 5
@@ -44,9 +43,22 @@ c = a + 10
 
 <hr>
 
-<h3>3. Print Methods</h3>
+<h3>3. User Input</h3>
 <p>
-The <b>print()</b> function displays output.
+The <b>input()</b> function is used to take input from the user.
+By default, input is of type <b>string</b>.
+</p>
+
+<pre><code>name = input("Enter name: ")
+age = int(input("Enter age: "))
+print(name, age)
+</code></pre>
+
+<hr>
+
+<h3>4. Print Methods</h3>
+<p>
+The <b>print()</b> function displays output to the console.
 </p>
 
 <pre><code>print("Hello", "World")
@@ -56,9 +68,9 @@ print(f"Score is {90}")
 
 <hr>
 
-<h3>4. Type Conversion</h3>
+<h3>5. Type Conversion</h3>
 <p>
-Converting one data type into another.
+Converting one data type to another is called type casting.
 </p>
 
 <pre><code>int(3.5)
@@ -69,11 +81,10 @@ int("25")
 
 <hr>
 
-<h3>5. Operators</h3>
-
+<h3>6. Operators</h3>
 <ul>
   <li>Arithmetic: + - * / % //</li>
-  <li>Comparison: == != > <</li>
+  <li>Comparison: == != > < >= <=</li>
   <li>Logical: and or not</li>
   <li>Assignment: = += -=</li>
   <li>Membership: in, not in</li>
@@ -86,7 +97,7 @@ print(a > b)
 
 <hr>
 
-<h3>6. Strings</h3>
+<h3>7. Strings</h3>
 <p>
 Strings are immutable sequences of characters.
 </p>
@@ -99,19 +110,21 @@ print(s[::-1])
 
 <hr>
 
-<h3>7. Lists</h3>
+<h3>8. Lists</h3>
 <p>
-Lists are ordered and mutable.
+Lists are ordered and mutable collections.
 </p>
 
 <pre><code>lst = [1, 2, 3]
 lst.append(4)
-lst[0] = 10
+lst.insert(1, 10)
+lst.remove(2)
+lst.pop()
 </code></pre>
 
 <hr>
 
-<h3>8. Tuples</h3>
+<h3>9. Tuples</h3>
 <p>
 Tuples are immutable collections.
 </p>
@@ -122,9 +135,9 @@ print(t[1])
 
 <hr>
 
-<h3>9. Sets</h3>
+<h3>10. Sets</h3>
 <p>
-Sets store unique values.
+Sets store unique values and are unordered.
 </p>
 
 <pre><code>s = {1, 2, 3, 3}
@@ -133,13 +146,16 @@ print(s)
 
 <hr>
 
-<h3>10. Dictionary</h3>
+<h3>11. Dictionary</h3>
 <p>
-Dictionaries store key-value pairs.
+Dictionaries store data as key–value pairs.
 </p>
 
 <pre><code>d = {"name": "Ram", "age": 25}
 print(d["name"])
+print(d.keys())
+print(d.values())
+print(d.items())
 </code></pre>
 
 <hr>
@@ -164,6 +180,8 @@ while n <= 5:
 <pre><code>for i in range(10):
     if i == 5:
         break
+    if i == 2:
+        continue
     print(i)
 </code></pre>
 
@@ -191,65 +209,66 @@ Functions are reusable blocks of code.
 print(add(2, 3))
 </code></pre>
 
-<h4>Lambda Function</h4>
+<h4>Types of Arguments</h4>
+<pre><code>def greet(name, msg="Hello"):
+    print(msg, name)
+
+greet("Ram")
+greet("Ram", "Hi")
+</code></pre>
+
+<h4>Return vs Print</h4>
+<pre><code>def square(x):
+    return x * x
+
+result = square(5)
+print(result)
+</code></pre>
+
+<hr>
+
+<h3>4. Lambda Function</h3>
 <pre><code>square = lambda x: x * x
-print(square(5))
+print(square(4))
 </code></pre>
 
 <hr>
 
-<h3>4. Comprehensions</h3>
-<p>
-A short way to create collections.
-</p>
+<h3>5. Comprehensions</h3>
 
-<h4>List Comprehension</h4>
 <pre><code>squares = [x*x for x in range(5)]
-</code></pre>
-
-<h4>Set Comprehension</h4>
-<pre><code>unique = {x for x in [1,2,2,3]}
-</code></pre>
-
-<h4>Dictionary Comprehension</h4>
-<pre><code>d = {x: x*x for x in range(5)}
+unique = {x for x in [1,2,2,3]}
+data = {x: x*x for x in range(3)}
 </code></pre>
 
 <hr>
 
-<h3>5. File Handling</h3>
+<h3>6. File Handling</h3>
 
-<h4>Write File</h4>
 <pre><code>with open("data.txt", "w") as f:
     f.write("Hello Python")
-</code></pre>
 
-<h4>Read File</h4>
-<pre><code>with open("data.txt", "r") as f:
+with open("data.txt", "r") as f:
     print(f.read())
 </code></pre>
 
 <hr>
 
-<h3>6. Exception Handling</h3>
-<p>
-Handles runtime errors safely.
-</p>
-
+<h3>7. Exception Handling</h3>
 <pre><code>try:
-    a = int(input("Enter number: "))
-    print(10 / a)
+    num = int(input("Enter number: "))
+    print(10 / num)
 except ZeroDivisionError:
     print("Cannot divide by zero")
 except ValueError:
     print("Invalid input")
 finally:
-    print("Done")
+    print("Execution finished")
 </code></pre>
 
 <hr>
 
-<h3>7. Object-Oriented Programming (OOPS)</h3>
+<h3>8. Object-Oriented Programming (OOPS)</h3>
 
 <h4>Class & Object</h4>
 <pre><code>class Student:
@@ -291,8 +310,8 @@ class Cat:
     def sound(self):
         print("Meow")
 
-for a in (Dog(), Cat()):
-    a.sound()
+for animal in (Dog(), Cat()):
+    animal.sound()
 </code></pre>
 
 <h4>Abstraction</h4>
@@ -302,6 +321,42 @@ class Shape(ABC):
     @abstractmethod
     def area(self):
         pass
+</code></pre>
+
+<hr>
+
+<h3>9. pass, None & __main__</h3>
+
+<pre><code>def future_function():
+    pass
+
+x = None
+
+def main():
+    print("Program Started")
+
+if __name__ == "__main__":
+    main()
+</code></pre>
+
+<hr>
+
+<h2>🧠 Practice Programs</h2>
+
+<pre><code># Reverse a string
+s = "Python"
+print(s[::-1])
+
+# Find largest number
+nums = [3, 7, 1]
+print(max(nums))
+
+# Count vowels
+count = 0
+for ch in "python":
+    if ch in "aeiou":
+        count += 1
+print(count)
 </code></pre>
 
 <hr>
