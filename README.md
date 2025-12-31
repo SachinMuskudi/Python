@@ -1,7 +1,7 @@
 <h1 align="center">🐍 Python Learning Roadmap</h1>
 
 <p align="center">
-  <i>This README explains Python concepts learned from Basics to Intermediate level in a clear and beginner-friendly way.</i>
+  <i>A complete beginner-to-intermediate Python guide with clear explanations, syntax, and examples.</i>
 </p>
 
 <hr>
@@ -10,48 +10,35 @@
 
 <h3>1. Data Types</h3>
 <p>
-A data type tells Python <b>what kind of data</b> a value represents and <b>what operations</b> can be performed on it.
-Python is a dynamically typed language, which means the data type is decided automatically at runtime based on the value assigned.
+A data type defines the <b>type of value</b> stored in a variable and the <b>operations</b> that can be performed on it.
+Python is <b>dynamically typed</b>, meaning type is decided at runtime.
 </p>
 
-<p>
-Common built-in data types include:
-</p>
 <ul>
   <li><b>int</b> – whole numbers</li>
-  <li><b>float</b> – decimal numbers</li>
-  <li><b>str</b> – text data</li>
-  <li><b>list</b> – ordered, mutable collection</li>
-  <li><b>tuple</b> – ordered, immutable collection</li>
-  <li><b>set</b> – unordered collection of unique values</li>
-  <li><b>dict</b> – key–value pairs</li>
+  <li><b>float</b> – decimal values</li>
+  <li><b>str</b> – text</li>
+  <li><b>list</b> – ordered & mutable</li>
+  <li><b>tuple</b> – ordered & immutable</li>
+  <li><b>set</b> – unordered & unique</li>
+  <li><b>dict</b> – key-value pairs</li>
 </ul>
 
-<pre><code>x = 10        # int
-price = 99.5  # float
-name = "Ram"  # string
+<pre><code>x = 10
+price = 99.5
+name = "Python"
 </code></pre>
 
 <hr>
 
 <h3>2. Variables</h3>
 <p>
-Variables are names that <b>reference values stored in memory</b>.
-In Python, variables do not require explicit type declaration.
-The variable automatically points to the object created in memory.
+Variables are names that <b>refer to memory locations</b>.
+No need to declare data type explicitly.
 </p>
-
-<p>
-A variable can store:
-</p>
-<ul>
-  <li>A number</li>
-  <li>A string</li>
-  <li>The result of an expression</li>
-</ul>
 
 <pre><code>a = 5
-b = "Python"
+b = "Hello"
 c = a + 10
 </code></pre>
 
@@ -59,90 +46,62 @@ c = a + 10
 
 <h3>3. Print Methods</h3>
 <p>
-The <b>print()</b> function is used to display output to the console.
-Python provides multiple ways to format output depending on the need.
+The <b>print()</b> function displays output.
 </p>
 
-<ul>
-  <li>Using commas – adds space automatically</li>
-  <li>Using + operator – concatenates strings</li>
-  <li>Using format identifiers (%)</li>
-  <li>Using f-strings – modern and readable</li>
-</ul>
-
 <pre><code>print("Hello", "World")
-print("Hello" + " World")
 print("Age is %d" % 25)
 print(f"Score is {90}")
 </code></pre>
 
 <hr>
 
-<h3>4. Type Conversions</h3>
+<h3>4. Type Conversion</h3>
 <p>
-Type conversion is the process of converting one data type into another.
-This is commonly required when taking input from users or performing calculations.
+Converting one data type into another.
 </p>
 
-<p>
-Python supports both implicit and explicit type conversion.
-</p>
-
-<pre><code>int(3.7)        # float to int
-float(10)       # int to float
-str(100)        # int to string
-int("25")       # string to int
-float("3.14")   # string to float
+<pre><code>int(3.5)
+float(10)
+str(100)
+int("25")
 </code></pre>
 
 <hr>
 
-<h3>5. Operators in Python</h3>
-<p>
-Operators are special symbols used to perform operations on variables and values.
-</p>
+<h3>5. Operators</h3>
 
 <ul>
-  <li><b>Arithmetic Operators</b>: +, -, *, /, %, //</li>
-  <li><b>Assignment Operators</b>: =, +=, -=, *=</li>
-  <li><b>Comparison Operators</b>: ==, !=, >, <, >=, <=</li>
-  <li><b>Logical Operators</b>: and, or, not</li>
-  <li><b>Membership Operators</b>: in, not in</li>
-  <li><b>Identity Operators</b>: is, is not</li>
-  <li><b>Bitwise Operators</b>: &, |, ^, <<, >></li>
+  <li>Arithmetic: + - * / % //</li>
+  <li>Comparison: == != > <</li>
+  <li>Logical: and or not</li>
+  <li>Assignment: = += -=</li>
+  <li>Membership: in, not in</li>
 </ul>
 
 <pre><code>a = 10
 b = 5
-a > b
-a += 2
-"x" in "text"
+print(a > b)
 </code></pre>
 
 <hr>
 
 <h3>6. Strings</h3>
 <p>
-Strings are sequences of characters enclosed in quotes.
-Strings are <b>immutable</b>, meaning once created, they cannot be changed.
-</p>
-
-<p>
-Strings support indexing, slicing, and skipping.
+Strings are immutable sequences of characters.
 </p>
 
 <pre><code>s = "Python"
-s[0]       # indexing
-s[1:4]     # slicing
-s[::2]     # skipping
+print(s[0])
+print(s[1:4])
+print(s[::-1])
 </code></pre>
 
 <hr>
 
 <h3>7. Lists</h3>
 <p>
-Lists are ordered collections that can store multiple values.
-Lists are <b>mutable</b>, so elements can be added, removed, or modified.
+Lists are ordered and mutable.
 </p>
 
 <pre><code>lst = [1, 2, 3]
@@ -154,37 +113,33 @@ lst[0] = 10
 
 <h3>8. Tuples</h3>
 <p>
-Tuples are similar to lists but are <b>immutable</b>.
-They are used when data should not be modified.
+Tuples are immutable collections.
 </p>
 
 <pre><code>t = (1, 2, 3)
-t[1]
+print(t[1])
 </code></pre>
 
 <hr>
 
 <h3>9. Sets</h3>
 <p>
-Sets are unordered collections that store only unique values.
-They do not support indexing or slicing.
-Sets use hashing internally.
+Sets store unique values.
 </p>
 
 <pre><code>s = {1, 2, 3, 3}
-# Result: {1, 2, 3}
+print(s)
 </code></pre>
 
 <hr>
 
 <h3>10. Dictionary</h3>
 <p>
-Dictionaries store data as key–value pairs.
-They are mutable and use hashing for fast access.
+Dictionaries store key-value pairs.
 </p>
 
 <pre><code>d = {"name": "Ram", "age": 25}
-d["name"]
+print(d["name"])
 </code></pre>
 
 <hr>
@@ -194,30 +149,18 @@ d["name"]
 <h3>1. Control Statements</h3>
 
 <h4>For Loop</h4>
-<p>
-For loops iterate over sequences like strings, lists, tuples, sets, and dictionaries.
-</p>
-
 <pre><code>for i in range(5):
     print(i)
 </code></pre>
 
 <h4>While Loop</h4>
-<p>
-While loops continue execution as long as a condition remains true.
-</p>
-
 <pre><code>n = 1
 while n <= 5:
     print(n)
     n += 1
 </code></pre>
 
-<h4>Break Statement</h4>
-<p>
-The break statement stops loop execution immediately.
-</p>
-
+<h4>Break & Continue</h4>
 <pre><code>for i in range(10):
     if i == 5:
         break
@@ -227,10 +170,6 @@ The break statement stops loop execution immediately.
 <hr>
 
 <h3>2. Conditional Statements</h3>
-<p>
-Conditional statements allow programs to make decisions.
-</p>
-
 <pre><code>if a > b:
     print("A is greater")
 elif a == b:
@@ -243,26 +182,132 @@ else:
 
 <h3>3. Functions</h3>
 <p>
-Functions are reusable blocks of code that perform a specific task.
-They help in modularizing programs and avoiding repetition.
+Functions are reusable blocks of code.
 </p>
 
 <pre><code>def add(a, b):
     return a + b
+
+print(add(2, 3))
 </code></pre>
 
+<h4>Lambda Function</h4>
 <pre><code>square = lambda x: x * x
-list(map(square, [1, 2, 3]))
+print(square(5))
 </code></pre>
 
 <hr>
 
 <h3>4. Comprehensions</h3>
 <p>
-Comprehensions provide a concise way to create collections using a single line.
+A short way to create collections.
 </p>
 
+<h4>List Comprehension</h4>
 <pre><code>squares = [x*x for x in range(5)]
-data = {x: x*x for x in range(3)}
 </code></pre>
 
+<h4>Set Comprehension</h4>
+<pre><code>unique = {x for x in [1,2,2,3]}
+</code></pre>
+
+<h4>Dictionary Comprehension</h4>
+<pre><code>d = {x: x*x for x in range(5)}
+</code></pre>
+
+<hr>
+
+<h3>5. File Handling</h3>
+
+<h4>Write File</h4>
+<pre><code>with open("data.txt", "w") as f:
+    f.write("Hello Python")
+</code></pre>
+
+<h4>Read File</h4>
+<pre><code>with open("data.txt", "r") as f:
+    print(f.read())
+</code></pre>
+
+<hr>
+
+<h3>6. Exception Handling</h3>
+<p>
+Handles runtime errors safely.
+</p>
+
+<pre><code>try:
+    a = int(input("Enter number: "))
+    print(10 / a)
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+except ValueError:
+    print("Invalid input")
+finally:
+    print("Done")
+</code></pre>
+
+<hr>
+
+<h3>7. Object-Oriented Programming (OOPS)</h3>
+
+<h4>Class & Object</h4>
+<pre><code>class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display(self):
+        print(self.name, self.age)
+
+s1 = Student("Ram", 20)
+s1.display()
+</code></pre>
+
+<h4>Encapsulation</h4>
+<pre><code>class Bank:
+    def __init__(self):
+        self.__balance = 1000
+</code></pre>
+
+<h4>Inheritance</h4>
+<pre><code>class Parent:
+    def show(self):
+        print("Parent")
+
+class Child(Parent):
+    pass
+
+c = Child()
+c.show()
+</code></pre>
+
+<h4>Polymorphism</h4>
+<pre><code>class Dog:
+    def sound(self):
+        print("Bark")
+
+class Cat:
+    def sound(self):
+        print("Meow")
+
+for a in (Dog(), Cat()):
+    a.sound()
+</code></pre>
+
+<h4>Abstraction</h4>
+<pre><code>from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+</code></pre>
+
+<hr>
+
+<h2 align="center">🎉 End of Python Learning Roadmap</h2>
+
+<p align="center">
+  <b>Happy Coding 🚀</b>
+</p>
